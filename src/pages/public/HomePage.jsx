@@ -5,7 +5,8 @@ import React from 'react'
 const HomePage = () => {
     return (
         <div className="contenedor">
-            home page
+            <h1>Inicia sesíon para publicar</h1>
+            <h1>preguntas y respuestas</h1>
         </div>
     )
 }

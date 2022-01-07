@@ -47,10 +47,10 @@ const PublicLayout = () => {
             <Outlet/>
             <div className="contenedor-botones">
                 <div className="espaciado-boton">
-                    <button className="btn btn-success" onClick={handler}> Crear cuenta</button>
+                    <button className="btn btn-success  btn-lg active" role="button" onClick={handler}>  Crear cuenta</button>
 
                 </div>
-                <button className="btn btn-primary" role="button" onClick={handler}> Continuar con google</button>
+                <button className="btn btn-primary  btn-lg active" role="button" onClick={handler}><img src="/imgGoogle.png" height ="30" width="30" style={{marginRight:"10px"}}/> Continuar con google</button>
 
             </div>
 
