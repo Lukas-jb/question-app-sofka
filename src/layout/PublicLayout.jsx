@@ -44,12 +44,16 @@ const PublicLayout = () => {
     return (
         <div>
             <Navbar elements={publicNavbar}/>
-            <div className="espaciado-boton">
+            <Outlet/>
+            <div className="contenedor-botones">
+                <div className="espaciado-boton">
+                    <button className="btn btn-success" onClick={handler}> Crear cuenta</button>
+
+                </div>
                 <button className="btn btn-primary" role="button" onClick={handler}> Continuar con google</button>
 
             </div>
-            <button className="btn btn-success" onClick={handler}> Crear cuenta</button>
-            <Outlet/>
+
             <Footer/>
         </div>
     )

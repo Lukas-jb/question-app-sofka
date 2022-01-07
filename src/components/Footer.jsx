@@ -3,8 +3,10 @@ import React from 'react'
 const Footer = () => {
     return (
         <div>
-           <footer>
-               <p>App para el ingreso de preguntas y respuestas </p>
+           <footer className = "footer">
+
+               <p>App para preguntar y puntuar respuestas </p>
+               <p>Lukas Jimenez &copy; </p>
            </footer>
         </div>
     )
