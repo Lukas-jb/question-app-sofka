@@ -2,12 +2,12 @@ import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 
 export const app = firebase.initializeApp({
-        "projectId": "quetions-app",
-        "appId": "1:1088315107365:web:8c2e1b99a45bfdcf4737cc",
-        "storageBucket": "quetions-app.appspot.com",
-        "apiKey": "AIzaSyDal7rcOVzjHkxZPAbNBOEED77AsqaABNk",
-        "authDomain": "quetions-app.firebaseapp.com",
-        "messagingSenderId": "1088315107365"
+        apiKey: "AIzaSyD1mxfqmd6762qUzoohACUnxwLHEFMsLAY",
+        authDomain: "preguntas-respuestas-sofka.firebaseapp.com",
+        projectId: "preguntas-respuestas-sofka",
+        storageBucket: "preguntas-respuestas-sofka.appspot.com",
+        messagingSenderId: "37586708611",
+        appId: "1:37586708611:web:abe8843d97321155e393b6"
 })
 
 export const google = new firebase.auth.GoogleAuthProvider();

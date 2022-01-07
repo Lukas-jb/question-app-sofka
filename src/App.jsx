@@ -13,6 +13,7 @@ import OneQuestionPagePublic from './pages/public/OneQuestionPagePublic';
 import QuestionsPagePublic from './pages/public/QuestionsPagePublic';
 import CreateQuestion from './pages/private/CreateQuestion';
 import MyQuestions from './pages/private/MyQuestions';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 

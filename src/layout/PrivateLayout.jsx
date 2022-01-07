@@ -42,7 +42,7 @@ const PrivateLayout = () => {
         <>
         {state.user
         ?(<div>
-            <button onClick={handler}>adios socio</button>
+            <button onClick={handler}>Cerrar sesion</button>
             <Navbar elements={privateNavbar}/>
             <span>PrivateLayout</span>
             <Outlet/>
