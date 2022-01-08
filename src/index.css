@@ -72,8 +72,8 @@ textarea {
     resize: none;
 }
 
-.question h2 {
-    font-size: 2.5rem;
+.question h3{
+    font-size: 1rem;
 }
 
 .question-excerpt {
@@ -99,11 +99,15 @@ textarea {
 
 .button {
     display: inline-block;
-    background: #ea3546;
+    background: #0c8e36;
     color: white;
     border-radius: 4px;
-    font-weight: 700;
-    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1.0rem;
+}
+
+.logout {
+    width: 160px;
 }
 
 .btn {

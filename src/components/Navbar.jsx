@@ -23,7 +23,7 @@ const Navbar = ({elements}) => {
                         <li className="nav-item active">
                             <Link
                                 className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                                to={`/prueba`}
+                                to={`/public/question/`}
                             >
                                 prueba
                             </Link>
