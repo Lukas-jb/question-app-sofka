@@ -1,20 +1,30 @@
-export const publicNavbar=[
+export const publicNavbar = [
     {
         titulo: 'Home',
-        url:'/',
+        url: '/',
     },
     {
-        titulo: 'Login',
-        url:'/Login',
+        titulo: 'Preguntas',
+        url: '/QuestionsPage',
     },
 ];
 
-export const privateNavbar=[
+export const privateNavbar = [
     {
         titulo: 'Home',
-        url:'/',    },
+        url: '/',
+    },
     {
-        titulo: 'Questions',
-        url:'/questionpage',
-    }
+        titulo: 'Preguntas',
+        url: '/questionpage',
+    },
+    {
+        titulo: 'Crear Pregunta',
+        url: '/CreateQuestion'
+    },
+    {
+        titulo: 'Mis Preguntas',
+        url:'/private/MyQuestions/',
+    },
+
 ];

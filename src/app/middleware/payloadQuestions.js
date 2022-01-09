@@ -38,7 +38,7 @@ export const loadById = (id) => (dispatch) => {
 }
 
 
-export const postQuestion = (question) => {
+export const postQuestion = (question,navigate) => {
 
     const options = {
         method: 'POST',
@@ -48,7 +48,7 @@ export const postQuestion = (question) => {
     };
 
     axios.request(options).then(function (response) {
-        console.log(response.data);
+        navigate("/private/QuestionsPage")
     }).catch(function (error) {
         console.error(error);
     });

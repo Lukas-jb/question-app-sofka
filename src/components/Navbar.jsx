@@ -39,24 +39,35 @@ const Navbar = ({elements}) => {
                         <li className="nav-item active">
                             <Link
                                 className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                                to={`/public/question/`}
-                            >
+                                to={``}>
                                 Home
                             </Link>
+
                         </li>
-                        <li className="nav-item">
+                        <li className="list-unstyled nav-item">
                             <Link
                                 className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                                to={`/prueba2`}
-                            >
+                                to={`/private/QuestionsPage`}>
                                 Preguntas
                             </Link>
                         </li>
+
                     </ul>
-                    { state.user?
-                        <button className="logout btn-warning  btn-lg active"  onClick={handler}>Cerrar sesion</button>
-                   :null
+                    <li className="list-unstyled">{state.user ?
+                        <Link
+                            className="navar-link fs-6 text-decoration-none list-unstyled"
+                            style={{marginLeft: "650px", color: "#C7C7C7"}}
+                            to={`/private/CreateQuestion`}>
+                            Crear Preguntas
+                        </Link>
+                        : null
                     }
+                    </li>
+                    <li className="list-unstyled">{state.user ?
+                        <button className="logout btn-warning  btn-lg active" onClick={handler}>Cerrar sesion</button>
+                        : null
+                    }
+                    </li>
                 </div>
             </nav>
         </div>
