@@ -5,7 +5,7 @@ const Navbar = ({elements}) => {
         <div>
 
             <nav className="navbar navbar-expand-lg navbar-dark color-navbar ">
-                <img src="/logo.png" alt="Logo" width={100} height={100} style={{marginLeft:"50px"}}/>
+                <img src="/logo.png" alt="Logo" width={80} height={80} style={{marginLeft:"50px"}}/>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -25,7 +25,7 @@ const Navbar = ({elements}) => {
                                 className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
                                 to={`/public/question/`}
                             >
-                                prueba
+                                Home
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -33,7 +33,7 @@ const Navbar = ({elements}) => {
                                 className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
                                 to={`/prueba2`}
                             >
-                                prueba 2
+                                Preguntas
                             </Link>
                         </li>
                     </ul>

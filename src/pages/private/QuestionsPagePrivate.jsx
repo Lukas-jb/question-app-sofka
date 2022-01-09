@@ -16,9 +16,9 @@ const QuestionsPagePrivate = () => {
     const [filtro, setFiltro] = useState("");
 
     return (
-        <>
+        <div className="contenedor-2">
             <input
-                className="form-control  mb-3 "
+                className="form-control "
                 placeholder="Buscar preguntas"
                 type="text"
                 onChange={e => setFiltro(e.target.value.toUpperCase())}
@@ -32,7 +32,7 @@ const QuestionsPagePrivate = () => {
                 )
 
             })}
-        </>
+        </div>
     )
 }
 

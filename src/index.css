@@ -72,7 +72,7 @@ textarea {
     resize: none;
 }
 
-.question h3{
+.question h3 {
     font-size: 1rem;
 }
 
@@ -99,11 +99,12 @@ textarea {
 
 .button {
     display: inline-block;
-    background: #0c8e36;
+    background: #075721;
     color: white;
     border-radius: 4px;
     font-weight: 500;
     padding: 0.5rem 1.0rem;
+
 }
 
 .logout {
@@ -115,17 +116,17 @@ textarea {
 }
 
 .espaciado-boton {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .contenedor-botones {
-    height: 25vh;
+    height: 20vh;
     background-color: #f0f2f5;
 }
 
 .color-navbar {
     height: 15vh;
-    background: #111;
+    background: #25132d;
 
 }
 
@@ -134,14 +135,29 @@ textarea {
 }
 
 .footer {
-    height: 10vh;
-    background: #111;
+    height: 84px;
+    background: #25132d;
     color: white;
-
 }
 
 .contenedor {
-    height: 55vh;
+    height: 20vh;
     background-color: #f0f2f5;
+}
 
+.contenedor-2 {
+    min-height: 72.3vh;
+    background-color: #f0f2f5;
+}
+
+.formulario {
+    width: 650px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+.contenerod-imput {
+    padding-bottom: 8px;
+    padding-top: 8px;
 }

@@ -19,7 +19,7 @@ const OneQuestionPagePrivate = () => {
     console.log("aparece ", oneQuestion);
 
     return (
-        <>  
+        <div className="contenedor-2">
             <h1>private</h1>
             {oneQuestion && 
             <>
@@ -33,7 +33,7 @@ const OneQuestionPagePrivate = () => {
             </>     
             }
             
-        </>
+        </div>
     )
 }
 

@@ -55,7 +55,7 @@ export const postQuestion=(question)=>{
 }
 
 
-export const postAnswer=(answer)=>{
+export const postAnswer=(answer)=>(dispatch) =>{
 
     const options = {
         method: 'POST',
@@ -66,6 +66,7 @@ export const postAnswer=(answer)=>{
       
       axios.request(options).then(function (response) {
         console.log(response.data);
+        dispatch(oneQuestionLoadSucces(response.data))
       }).catch(function (error) {
         console.error(error);
       });
