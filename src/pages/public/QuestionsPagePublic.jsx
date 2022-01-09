@@ -15,7 +15,7 @@ const QuestionsPagePublic = () => {
     
     return (
         <>
-            <h1>public</h1>
+            <h1>Explora las Preguntas</h1>
             {error&& <h1>{error}</h1>}
             {questions && questions.map((question)=>{
                 return(

@@ -1,13 +1,25 @@
+import ReactQuill from 'react-quill';
+import '../../../node_modules/react-quill/dist/quill.snow.css';
 
-const ViewAnswer = ({answer}) => {  
+const ViewAnswer = ({answer}) => {
 
     return(
         <div className='question'>
 
-            <p>{answer.answer} - <small>{answer.position}</small></p>
-        
+            <ReactQuill className='quill-editor'
+                        readOnly='true'
+                        preserveWhitespace='false'
+                        placeholder='Ingresa una pregunta / respuesta'
+                        value={answer.answer}
+                        modules={ViewAnswer.modules}
+            />
+
         </div>
     )
 }
+
+ViewAnswer.modules = {
+    toolbar: false
+};
 
 export default ViewAnswer

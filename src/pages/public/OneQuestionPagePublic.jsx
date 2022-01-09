@@ -18,7 +18,7 @@ const OneQuestionPagePublic = () => {
   
     return (    
         <>
-        <h1>public</h1>
+        <h2>Respuestas a esta pregunta</h2>
         {oneQuestion&&(
         <>
         <OneQuestionPublic question={oneQuestion}/>

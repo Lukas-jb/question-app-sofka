@@ -1,9 +1,8 @@
-import { applyMiddleware } from '@reduxjs/toolkit';
-import React, { useState } from 'react';
+import React from 'react';
 import ReactQuill from 'react-quill';
 import '../../node_modules/react-quill/dist/quill.snow.css';
-import { postAnswer } from '../app/middleware/payloadQuestions';
-import { useDispatch } from 'react-redux';
+
+import {useDispatch} from 'react-redux';
 
 
 const TextEditor = ({body, setBody}) => {
@@ -16,11 +15,10 @@ const TextEditor = ({body, setBody}) => {
     }
 
 
-
     return (
         <div>
             <form>
-                <ReactQuill
+                <ReactQuill className="quill-editor"
                     placeholder='Ingresa una pregunta/respuesta'
                     modules={TextEditor.modules}
                     formats={TextEditor.formats}
@@ -34,10 +32,10 @@ const TextEditor = ({body, setBody}) => {
 
 TextEditor.modules = {
     toolbar: [
-        [{ header: "1" }, {header: "2"}, {header: [3, 4, 5, 6]}, {font: []}],
-        [{ size: [] }],
-        [ "bold", "italic", "underline", "strike", "blockquote" ],
-        [{ list: "ordered", }, { list: "bullet" }],
+        [{header: "1"}, {header: "2"}, {header: [3, 4, 5, 6]}, {font: []}],
+        [{size: []}],
+        ["bold", "italic", "underline", "strike", "blockquote"],
+        [{list: "ordered",}, {list: "bullet"}],
         ["link"],
         ["clean"],
         ["code-block"],

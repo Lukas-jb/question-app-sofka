@@ -104,11 +104,13 @@ textarea {
     border-radius: 4px;
     font-weight: 500;
     padding: 0.5rem 1.0rem;
+    text-decoration: none;
 
 }
 
 .logout {
     width: 160px;
+    margin-left: 780px;
 }
 
 .btn {
@@ -116,7 +118,7 @@ textarea {
 }
 
 .espaciado-boton {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .contenedor-botones {
@@ -160,4 +162,22 @@ textarea {
 .contenerod-imput {
     padding-bottom: 8px;
     padding-top: 8px;
+}
+
+
+.ico-1 {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 620px
+}
+
+.quill-editor {
+    width: 850px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.question {
+    margin-top: 10px;
 }

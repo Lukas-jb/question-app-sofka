@@ -37,17 +37,17 @@ const PrivateLayout = () => {
 
 
     return (
-        <>
+        <div className="contenedor-2">
             {state.user
                 ? (<div>
                     <Navbar elements={privateNavbar}/>
-                    <button className="logout btn-warning  btn-lg active" onClick={handler}>Cerrar sesion</button>
+
                     <Outlet/>
                     <Footer/>
                 </div>)
                 :
                 null}
-        </>
+        </div>
 
     )
 }

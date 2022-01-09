@@ -1,11 +1,27 @@
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
+import {app} from "../service/firebase";
+import {logoutAction} from "../actions/AuthorActions";
+import {useDispatch, useSelector} from "react-redux";
+
 
 const Navbar = ({elements}) => {
+
+    const state = useSelector(state => state.auth)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+
+    const handler = () => {
+        app.auth().signOut()
+        dispatch(logoutAction())
+        navigate("/")
+    }
+
     return (
         <div>
 
             <nav className="navbar navbar-expand-lg navbar-dark color-navbar ">
-                <img src="/logo.png" alt="Logo" width={80} height={80} style={{marginLeft:"50px"}}/>
+                <img src="/logo.png" alt="Logo" width={80} height={80} style={{marginLeft: "50px"}}/>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -37,6 +53,10 @@ const Navbar = ({elements}) => {
                             </Link>
                         </li>
                     </ul>
+                    { state.user?
+                        <button className="logout btn-warning  btn-lg active"  onClick={handler}>Cerrar sesion</button>
+                   :null
+                    }
                 </div>
             </nav>
         </div>

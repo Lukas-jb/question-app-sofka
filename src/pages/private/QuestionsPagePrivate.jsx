@@ -17,14 +17,17 @@ const QuestionsPagePrivate = () => {
 
     return (
         <div className="contenedor-2">
-            <input
-                className="form-control "
-                placeholder="Buscar preguntas"
-                type="text"
-                onChange={e => setFiltro(e.target.value.toUpperCase())}
-            />
+            <div className="formulario">
+                <input
+                    className=" form-control "
+                    placeholder="Buscar preguntas"
+                    type="text"
+                    onChange={e => setFiltro(e.target.value.toUpperCase())}
+                />
+                <img className='ico-1' src="/outline_search_black_24dp.png" alt="" />
+            </div>
 
-            <h1>private</h1>
+            <h2>Explora las Preguntas</h2>
             {error && <h1>{error}</h1>}
             {questions && questions.filter(busqueda => busqueda.category.includes(filtro) || busqueda.type.includes(filtro)).map((question) => {
                 return (
