@@ -1,16 +1,16 @@
-import { questionsLoading ,questionsLoadSucces,questionsLoadError } from "../../actions/QuestionsActions";
-import {oneQuestionLoadSucces , oneQuestionLoadError} from "../../actions/OneQuestionActions";
-import { myQuestionsLoadSucces, myQuestionsLoading,myQuestionsLoadError } from "../../actions/MyQuestionsActions";
+import {questionsLoading, questionsLoadSucces, questionsLoadError} from "../../actions/QuestionsActions";
+import {oneQuestionLoadSucces, oneQuestionLoadError} from "../../actions/OneQuestionActions";
+import {myQuestionsLoadSucces, myQuestionsLoading, myQuestionsLoadError} from "../../actions/MyQuestionsActions";
 import axios from "axios";
 
-export const loadAllQuestion=()=>(dispatch)=>{
-  
+export const loadAllQuestion = () => (dispatch) => {
+
     dispatch(questionsLoading())
 
     const options = {
-    method: 'GET',
-    url: 'http://localhost:8080/getAll',
-    headers: {'Content-Type': 'application/json'}
+        method: 'GET',
+        url: 'http://localhost:8080/getAll',
+        headers: {'Content-Type': 'application/json'}
     };
 
     axios.request(options).then(function (response) {
@@ -21,70 +21,72 @@ export const loadAllQuestion=()=>(dispatch)=>{
 }
 
 
-export const loadById=(id)=>(dispatch)=>{
+export const loadById = (id) => (dispatch) => {
 
 
     const options = {
         method: 'GET',
         url: `http://localhost:8080/get/${id}`,
         headers: {'Content-Type': 'application/json'}
-        };
-    
-        axios.request(options).then(function (response) {
-            dispatch(oneQuestionLoadSucces(response.data))
-        }).catch(function (error) {
-            dispatch(oneQuestionLoadError(error.message))
-        });
+    };
+
+    axios.request(options).then(function (response) {
+        dispatch(oneQuestionLoadSucces(response.data))
+    }).catch(function (error) {
+        dispatch(oneQuestionLoadError(error.message))
+    });
 }
 
 
-export const postQuestion=(question)=>{
+export const postQuestion = (question) => {
 
     const options = {
         method: 'POST',
         url: 'http://localhost:8080/create',
         headers: {'Content-Type': 'application/json'},
         data: question
-      };
-      
-      axios.request(options).then(function (response) {
+    };
+
+    axios.request(options).then(function (response) {
         console.log(response.data);
-      }).catch(function (error) {
+    }).catch(function (error) {
         console.error(error);
-      });
+    });
 }
 
 
-export const postAnswer=(answer)=>(dispatch) =>{
+export const postAnswer = (answer) => (dispatch) => {
 
     const options = {
         method: 'POST',
         url: 'http://localhost:8080/add',
         headers: {'Content-Type': 'application/json'},
         data: answer
-      };
-      
-      axios.request(options).then(function (response) {
+    };
+
+    axios.request(options).then(function (response) {
         console.log(response.data);
         dispatch(oneQuestionLoadSucces(response.data))
-      }).catch(function (error) {
+    }).catch(function (error) {
         console.error(error);
-      });
+    });
 }
 
 
-export const deleteQuestion=(id)=>{
+export const deleteQuestion = (id, myQuestions) => (dispatch) => {
     const options = {method: 'DELETE', url: `http://localhost:8080/delete/${id}`};
 
-        axios.request(options).then(function (response) {
+    axios.request(options).then(function (response) {
+        const deleteOneQuestion = myQuestions.filter(questions=> questions.id !==id)
+        dispatch(myQuestionsLoadSucces(deleteOneQuestion))
         console.log(response.data);
-        }).catch(function (error) {
+    }).catch(function (error) {
         console.error(error);
-        });
+    });
 }
 
 
-export const getUserQuestion=(userId)=>(dispatch)=>{
+export const getUserQuestion = (userId) => (dispatch) => {
 
     dispatch(myQuestionsLoading())
 
@@ -92,10 +94,10 @@ export const getUserQuestion=(userId)=>(dispatch)=>{
         method: 'GET',
         url: `http://localhost:8080/getOwnerAll/${userId}`,
         headers: {'Content-Type': 'application/json'}
-      };
-      axios.request(options).then(function (response) {
+    };
+    axios.request(options).then(function (response) {
         dispatch(myQuestionsLoadSucces(response.data));
-      }).catch(function (error) {
+    }).catch(function (error) {
         dispatch(myQuestionsLoadError(error.message));
-      });
+    });
 }

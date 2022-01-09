@@ -3,15 +3,13 @@ import {app, google} from "../../service/firebase";
 import {useEffect} from "react"
 import {useDispatch, useSelector} from "react-redux"
 import {loginAction, loggedAction} from "../../actions/AuthorActions"
-import Navbar from "../../components/Navbar";
-import {publicNavbar} from "../../utils/NavbarList";
 import {Outlet, useNavigate,} from "react-router-dom";
 import PrivateLayout from "../../layout/PrivateLayout";
 import {Login} from "./Login";
-import Footer from "../../components/Footer";
 
 
 const HomePage = () => {
+
 
     const state = useSelector(state => state)
     const dispatch = useDispatch()
