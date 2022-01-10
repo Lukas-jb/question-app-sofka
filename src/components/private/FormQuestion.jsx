@@ -20,7 +20,8 @@ const FormQuestion = () => {
             userId: form.current[0].value,
             question: body,
             type: form.current[1].value,
-            category: form.current[2].value
+            category: form.current[2].value,
+            email:state.user.email
         }
         postQuestion(envioDatos, navigate)
     }

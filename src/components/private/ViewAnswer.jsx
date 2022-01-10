@@ -16,7 +16,7 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
                         value={answer.answer}
                         modules={ViewAnswer.modules}
             />
-            <div className="col-1">
+                <div className="col-1">
                 {deleteAnswer && (
 
                     <button

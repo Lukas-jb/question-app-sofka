@@ -26,7 +26,7 @@ const FormAnswer = ({idQuestion}) => {
     return (
 
         <div>
-            <form onSubmit={submitForm}>
+            <form onSubmit={submitForm} onChange={updateFormData}>
                 <label><h2>Agrega una respuesta</h2></label>
                 <TextEditor body={body} setBody={setBody}/>
                 <button className="button" type="submit">Enviar Respuesta</button>

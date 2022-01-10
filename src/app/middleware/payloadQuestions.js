@@ -1,12 +1,9 @@
 import {questionsLoading, questionsLoadSucces, questionsLoadError} from "../../actions/QuestionsActions";
-import {
-    oneQuestionLoadSucces,
-    oneQuestionLoadError,
-    oneQuestionsLoading,
-    oneQuestionsDeleteAnswer
-} from "../../actions/OneQuestionActions";
-import {myQuestionsLoadSucces, myQuestionsLoading, myQuestionsLoadError} from "../../actions/MyQuestionsActions";
+import {oneQuestionLoadSucces , oneQuestionLoadError, oneQuestionsLoading, oneQuestionsDeleteAnswer} from "../../actions/OneQuestionActions";
+import {myQuestionsLoadSucces, myQuestionsLoading, myQuestionsLoadError } from "../../actions/MyQuestionsActions";
 import axios from "axios";
+import CreateQuestion from "../../pages/private/CreateQuestion";
+
 const API_URL = "http://localhost:8080";
 
 export const loadAllQuestion = () => (dispatch) => {
@@ -26,9 +23,7 @@ export const loadAllQuestion = () => (dispatch) => {
     });
 }
 
-
 export const loadById = (id) => (dispatch) => {
-
 
     const options = {
         method: 'GET',
@@ -65,14 +60,14 @@ export const postAnswer = (answer) => (dispatch) => {
 
     const options = {
         method: 'POST',
-        url: 'http://localhost:8080/add',
+        url: 'http://localhost:8080/answer/add',
         headers: {'Content-Type': 'application/json'},
         data: answer
     };
 
     axios.request(options).then(function (response) {
-        console.log(response.data);
-        dispatch(oneQuestionLoadSucces(response.data))
+        console.log(response.data, "Data del answer");
+        dispatch(oneQuestionLoadSucces(response.data, "response.data"))
     }).catch(function (error) {
         console.error(error);
     });

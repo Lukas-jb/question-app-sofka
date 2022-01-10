@@ -20,7 +20,7 @@ const Navbar = ({elements}) => {
     return (
         <div>
 
-            <nav className="navbar navbar-expand-lg navbar-dark color-navbar ">
+            <nav className="navbar navbar-expand-lg navbar-dark color-navbar">
                 <img src="/logo.png" alt="Logo" width={80} height={80} style={{marginLeft: "50px"}}/>
                 <button
                     className="navbar-toggler"
