@@ -30,13 +30,13 @@ const FormQuestion = () => {
             <h1>Crea una pregunta.</h1>
 
             <form ref={form} onSubmit={submitForm} onChange={updateFormData}>
-                <label>Añadir nueva pregunta</label>
+                <label><b>Añadir nueva pregunta</b></label>
 
                 <TextEditor body={body} setBody={setBody}/>
                 <input required name="userId" hidden type="text" value={state.user.uid}
                        placeholder='Ingresa una pregunta'   ></input>
 
-                <label className=" font-medium">Type</label>
+                <label className=" font-medium h5"><b>TIPO</b></label>
                 <select className="formulario-Question" required  name="type" defaultValue="">
 
                     <option disabled type="String" value="">Seleccione una tipo de pregunta</option>
@@ -45,7 +45,7 @@ const FormQuestion = () => {
                     <option type="String">WITH_RESULT</option>
                     <option type="String">WITH_EVIDENCE</option>
                 </select>
-                <label className=" font-medium">Category</label>
+                <label className=" font-medium h5"><b>CATEGORIA</b></label>
                 <select className="formulario-Question" required name="category" defaultValue="">
 
                     <option disabled type="" value="">Seleccione una categoria para la pregunra</option>

@@ -43,6 +43,7 @@ const MyQuestions = (ii) => {
 
     return (
         <div className="contenedor-2">
+            <b><h2>Mis Preguntas</h2></b>
         {myQuestions && myQuestions.map((question)=>{
             return(
                 <QuestionsPrivate key={question.id} question={question} deleteQuestion={sweetAlert}/>

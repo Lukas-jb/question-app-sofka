@@ -105,14 +105,14 @@ textarea {
     font-weight: 500;
     padding: 0.5rem 1.0rem;
     text-decoration: none;
+    margin-left: 20px;
     margin-bottom: 5px;
 
 }
 
 .logout {
     width: 160px;
-    margin-left: 0px;
-}
+    margin-left: 540px}
 
 .navar-link {
           width:145px;

@@ -17,7 +17,6 @@ const FormAnswer = ({idQuestion}) => {
     const submitForm = (e) => {
         e.preventDefault();
         const formData = {userId: state.user.uid, questionId: idQuestion, answer: body, position: 1}
-        // postAnswer(formData);
         console.log(formData);
         dispatch(postAnswer(formData));
         setBody("");
@@ -30,9 +29,6 @@ const FormAnswer = ({idQuestion}) => {
             <form onSubmit={submitForm}>
                 <label><h2>Agrega una respuesta</h2></label>
                 <TextEditor body={body} setBody={setBody}/>
-                {/*<input required name="answer" type="text" placeholder='Ingresa una nueva respuesta'></input>
-                <input hidden name="userId" type="text" value={state.user.uid} ></input>
-                <input hidden name="questionId" type="text" value={idQuestion} ></input>*/}
                 <button className="button" type="submit">Enviar Respuesta</button>
                 <h3 color="">Respuestas a esta pregunta</h3>
             </form>
