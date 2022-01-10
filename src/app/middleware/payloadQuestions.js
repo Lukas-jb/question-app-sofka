@@ -1,7 +1,13 @@
 import {questionsLoading, questionsLoadSucces, questionsLoadError} from "../../actions/QuestionsActions";
-import {oneQuestionLoadSucces, oneQuestionLoadError} from "../../actions/OneQuestionActions";
+import {
+    oneQuestionLoadSucces,
+    oneQuestionLoadError,
+    oneQuestionsLoading,
+    oneQuestionsDeleteAnswer
+} from "../../actions/OneQuestionActions";
 import {myQuestionsLoadSucces, myQuestionsLoading, myQuestionsLoadError} from "../../actions/MyQuestionsActions";
 import axios from "axios";
+const API_URL = "http://localhost:8080";
 
 export const loadAllQuestion = () => (dispatch) => {
 
@@ -38,7 +44,7 @@ export const loadById = (id) => (dispatch) => {
 }
 
 
-export const postQuestion = (question,navigate) => {
+export const postQuestion = (question, navigate) => {
 
     const options = {
         method: 'POST',
@@ -77,7 +83,7 @@ export const deleteQuestion = (id, myQuestions) => (dispatch) => {
     const options = {method: 'DELETE', url: `http://localhost:8080/delete/${id}`};
 
     axios.request(options).then(function (response) {
-        const deleteOneQuestion = myQuestions.filter(questions=> questions.id !==id)
+        const deleteOneQuestion = myQuestions.filter(questions => questions.id !== id)
         dispatch(myQuestionsLoadSucces(deleteOneQuestion))
         console.log(response.data);
     }).catch(function (error) {
@@ -85,6 +91,19 @@ export const deleteQuestion = (id, myQuestions) => (dispatch) => {
     });
 }
 
+export const deleteAnswer = (id) => (dispatch) => {
+    dispatch(oneQuestionsLoading())
+    const options = {
+        method: 'DELETE',
+        url: `${API_URL}/answer/delete/${id}`
+    };
+    console.log(id, "id")
+    axios.request(options).then(function (response) {
+        dispatch(oneQuestionsDeleteAnswer(id))
+    }).catch(function (error) {
+        dispatch(oneQuestionLoadError(error.message))
+    });
+}
 
 export const getUserQuestion = (userId) => (dispatch) => {
 
