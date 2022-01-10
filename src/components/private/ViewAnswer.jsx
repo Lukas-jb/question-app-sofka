@@ -8,25 +8,27 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
 
     return (
         <div className='question'>
+            <div>
+                <ReactQuill className='quill-editor'
+                            readOnly='true'
+                            preserveWhitespace='false'
+                            placeholder='Ingresa una pregunta / respuesta'
+                            value={answer.answer}
+                            modules={ViewAnswer.modules}
 
-            <ReactQuill className='quill-editor'
-                        readOnly='true'
-                        preserveWhitespace='false'
-                        placeholder='Ingresa una pregunta / respuesta'
-                        value={answer.answer}
-                        modules={ViewAnswer.modules}
-            />
-                <div className="col-1">
-                {deleteAnswer && (
-
+                />
+                {console.log(answer.id,"daslkdjñdsfhadshfañldsfldkasfkadhsfhdfhasldfhadshfladsncadskjcnñdslc")}
+            </div>
+            <div className="eliminar-answer">
+                {state.user.uid === answer.userId ? deleteAnswer && (
                     <button
-                        className="btn-danger"
+                        className="btn btn-danger "
                         id={answer.id}
-                        onClick={() => deleteAnswer(answer.id)}>
+                        onClick={() => deleteAnswer(answer.id)}
+                    >
                         Eliminar Respuesta
                     </button>
-                )}
-                {console.log(answer.id, "id")}
+                ) : null}
             </div>
         </div>
 

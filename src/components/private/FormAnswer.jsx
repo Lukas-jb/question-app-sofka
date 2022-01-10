@@ -11,7 +11,7 @@ const FormAnswer = ({idQuestion}) => {
 
     const [body, setBody] = useState("");
 
-    const {form, formData, updateFormData} = useFormData();
+    const {updateFormData} = useFormData();
 
 
     const submitForm = (e) => {

@@ -90,7 +90,7 @@ export const deleteAnswer = (id) => (dispatch) => {
     dispatch(oneQuestionsLoading())
     const options = {
         method: 'DELETE',
-        url: `${API_URL}/answer/delete/${id}`
+        url: `http://localhost:8080/answer/delete/${id}`
     };
     console.log(id, "id")
     axios.request(options).then(function (response) {

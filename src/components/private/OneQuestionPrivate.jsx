@@ -11,11 +11,7 @@ const OneQuestionPrivate = ({oneQuestion}) => {
             <p>
                 <span style={{color: "#510073"}}>
                 <b>
-                    {<ReactQuill className='quill-editor'
-                                 readOnly='true'
-                                 preserveWhitespace='false'
-                                 value={oneQuestion.question}
-                                 modules={OneQuestionPrivate.modules}/>}
+
                 </b>
             </span>- {oneQuestion.category} -
                 <small>{oneQuestion.type}

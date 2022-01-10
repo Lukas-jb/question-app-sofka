@@ -17,6 +17,7 @@ const OneQuestionPagePrivate = () => {
     useEffect(() => {
         dispatch(loadById(id))
     }, [])
+
     console.log("aparece ", oneQuestion);
 
     const deleteAnswers = (id) => {
@@ -50,7 +51,7 @@ const OneQuestionPagePrivate = () => {
                     <FormAnswer idQuestion={oneQuestion.id}></FormAnswer>
                     {oneQuestion.answers && oneQuestion.answers.map((answer) => {
                         return (
-                            <ViewAnswer key={answer.id} answer={answer}/>
+                            <ViewAnswer key={answer.id} answer={answer} deleteAnswer={deleteAnswers}/>
                         )
                     })}
 
