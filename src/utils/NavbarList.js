@@ -11,20 +11,16 @@ export const publicNavbar = [
 
 export const privateNavbar = [
     {
-        titulo: 'Home',
-        url: '/',
-    },
-    {
         titulo: 'Preguntas',
-        url: '/questionpage',
+        url: '/private/QuestionsPage',
     },
     {
         titulo: 'Crear Pregunta',
-        url: '/CreateQuestion'
+        url: '/private/CreateQuestion'
     },
     {
         titulo: 'Mis Preguntas',
-        url:'/private/MyQuestions/',
+        url: '/private/MyQuestions/',
     },
 
 ];

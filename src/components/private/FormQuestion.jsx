@@ -27,7 +27,7 @@ const FormQuestion = () => {
 
     return (
         <div>
-            <h1>Este es un fomulario de question.</h1>
+            <h1>Crea una pregunta.</h1>
 
             <form ref={form} onSubmit={submitForm} onChange={updateFormData}>
                 <label>Añadir nueva pregunta</label>
@@ -37,18 +37,18 @@ const FormQuestion = () => {
                        placeholder='Ingresa una pregunta'   ></input>
 
                 <label className=" font-medium">Type</label>
-                <select required className="" name="type" defaultValue="Type">
+                <select className="formulario-Question" required  name="type" defaultValue="">
 
-                    <option disabled type="String" value="">Type</option>
+                    <option disabled type="String" value="">Seleccione una tipo de pregunta</option>
                     <option type="String">OPEN</option>
                     <option type="String">OPINION</option>
                     <option type="String">WITH_RESULT</option>
                     <option type="String">WITH_EVIDENCE</option>
                 </select>
                 <label className=" font-medium">Category</label>
-                <select required name="category" defaultValue="">
+                <select className="formulario-Question" required name="category" defaultValue="">
 
-                    <option disabled type="" value=""></option>
+                    <option disabled type="" value="">Seleccione una categoria para la pregunra</option>
                     <option type="String">TECHNOLOGY_AND_COMPUTER</option>
                     <option type="String">SCIENCES</option>
                     <option type="String">SOFTWARE_DEVELOPMENT</option>

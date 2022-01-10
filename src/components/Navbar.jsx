@@ -36,33 +36,22 @@ const Navbar = ({elements}) => {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <Link
-                                className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                                to={``}>
-                                Home
-                            </Link>
 
-                        </li>
-                        <li className="list-unstyled nav-item">
-                            <Link
-                                className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
-                                to={`/private/QuestionsPage`}>
-                                Preguntas
-                            </Link>
-                        </li>
+                        {elements.map((item, index) => {
+                            return (
+                                <li key={index} className="nav-item active">
+                                    <Link
+                                        className="nav-link fs-5 text-decoration-none" style={{marginLeft: "20px"}}
+                                        to={item.url}
+                                    >
+                                        <span>{item.titulo}</span>
+                                    </Link>
+                                </li>
+                            )
+                        })}
+
 
                     </ul>
-                    <li className="list-unstyled">{state.user ?
-                        <Link
-                            className="navar-link fs-6 text-decoration-none list-unstyled"
-                            style={{marginLeft: "650px", color: "#C7C7C7"}}
-                            to={`/private/CreateQuestion`}>
-                            Crear Preguntas
-                        </Link>
-                        : null
-                    }
-                    </li>
                     <li className="list-unstyled">{state.user ?
                         <button className="logout btn-warning  btn-lg active" onClick={handler}>Cerrar sesion</button>
                         : null

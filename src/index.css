@@ -186,8 +186,11 @@ textarea {
 .question {
     margin-top: 10px;
 }
-
-.quill-editor {
+.formulario-Question{
+    texcentered: center;
     width: 400px;
+    display: flex;
+    text-align: center;
+    margin: auto
 }
 
