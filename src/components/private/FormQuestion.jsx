@@ -55,7 +55,7 @@ const FormQuestion = () => {
                     <option type="String">SOCIAL_SCIENCES</option>
                     <option type="String">LANGUAGE</option>
                 </select>
-                <button type="submit">Enviar</button>
+                <button className="button-2 btn-primary  btn-lg active" role="button" type="submit">Enviar</button>
             </form>
 
         </div>

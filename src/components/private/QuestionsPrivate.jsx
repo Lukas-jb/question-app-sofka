@@ -25,7 +25,7 @@ const QuestionsPrivate = ({question, deleteQuestion}) => {
             <div className="espaciado-boton">
 
                 <div>{deleteQuestion && (
-                    <button className="button-right"
+                    <button className="btn btn-danger"
                             id={question.id}
                             onClick={() => deleteQuestion(question.id)}
                     >DELETE</button>)}

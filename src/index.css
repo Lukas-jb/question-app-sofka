@@ -112,10 +112,11 @@ textarea {
 
 .logout {
     width: 160px;
-    margin-left: 540px}
+    margin-left: 540px
+}
 
 .navar-link {
-          width:145px;
+    width: 145px;
 }
 
 .btn {
@@ -186,11 +187,38 @@ textarea {
 .question {
     margin-top: 10px;
 }
-.formulario-Question{
+
+.formulario-Question {
     texcentered: center;
     width: 400px;
     display: flex;
     text-align: center;
     margin: auto
+}
+
+.button-2 {
+    margin-Top: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.btn-iniciosecion{
+    border: none;
+    margin-left: 250px;
+    margin-top: 10px;
+
+
+
+}
+
+.posicion-bnt{
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    margin-top: 15px;
+
+
 }
 

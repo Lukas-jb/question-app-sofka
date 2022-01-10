@@ -43,18 +43,21 @@ export const Login = (props) => {
                     <input className="formulario " type="email" id="emailField" placeholder='Correo Electrónico'/>
                 </div>
                 <input className="formulario " type="password" id="passwordField" placeholder='Contraseña'/>
-                <div className="espaciado-boton">
-                    <button className="btn btn-success  btn-lg active" type='submit'>
-                        {isRegistrando ? "Crear cuenta" : "Iniciar sesión"}
-                    </button>
+                <div className="posicion-bnt">
+                    <div className="espaciado-boton">
+                        <button className="btn btn-success  btn-lg active" type='submit'>
+                            {isRegistrando ? "Crear cuenta" : "Iniciar sesión"}
+                        </button>
+                    </div>
+
+                    <div className="espaciado-boton">
+                        <button className="btn-iniciosecion" type='submit'
+                                onClick={() => setIsRegistrando(!isRegistrando)}>
+                            {isRegistrando ? "¡Inicia sesión!" : "Crear cuenta"}
+                        </button>
+                    </div>
                 </div>
             </form>
-            <div className="espaciado-boton">
-                <button className="btn btn-success  btn-lg active" type='submit'
-                        onClick={() => setIsRegistrando(!isRegistrando)}>
-                    {isRegistrando ? "¡Inicia sesión!" : "Crear cuenta"}
-                </button>
-            </div>
         </div>
     )
 }

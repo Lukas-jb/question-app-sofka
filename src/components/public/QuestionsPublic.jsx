@@ -1,18 +1,25 @@
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
+import ReactQuill from "react-quill";
 
-const QuestionsPublic = ({question}) => {  
+const QuestionsPublic = ({question}) => {
 
-    return(
+    return (
         <div className='question'>
-            <p> <span style={{color:"#510073FF"}}> <b>{question.question}</b> </span>- {question.category}  - <small>{question.type}</small></p>
+            <p>
+                <span style={{color: "#510073FF"}}>
+                <b>{<ReactQuill className='quill-editor'
+                    readOnly='true'
+                    preserveWhitespace='false'
+                    value={question.question}
+                    modules={QuestionsPublic.modules}/>}</b>
+            </span>- {question.category}
+                - <small>{question.type}</small></p>
 
-            {/* {onDelete && (
-                <button className="button right" onClick={() => onDelete(question.id)}>DELETE</button>
-            )} */}
+
             <Link to={`/question/${question.id}`} className="button">
                 Revisar Pregunta
             </Link>
-        
+
         </div>
     )
 }

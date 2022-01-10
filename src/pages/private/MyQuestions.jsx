@@ -1,21 +1,20 @@
-import { useDispatch,useSelector } from "react-redux"
-import { useEffect } from "react"
-import { getUserQuestion,deleteQuestion } from "../../app/middleware/payloadQuestions"
+import {useDispatch, useSelector} from "react-redux"
+import {useEffect} from "react"
+import {getUserQuestion, deleteQuestion} from "../../app/middleware/payloadQuestions"
 import QuestionsPrivate from "../../components/private/QuestionsPrivate"
 
 const MyQuestions = (ii) => {
     const dispatch = useDispatch()
-    const {user}=useSelector(state=>state.auth)
+    const {user} = useSelector(state => state.auth)
     const {
-        isLoading,
         myQuestions,
         error
     } = useSelector(state => state.myQuestion)
-    
-    useEffect(() =>{
+
+    useEffect(() => {
         dispatch(getUserQuestion(user.uid));
-       console.log(myQuestions)
-    },[])
+        console.log(myQuestions)
+    }, [])
 
     const sweetAlert = (id) => {
         const Swal = require('sweetalert2')
@@ -43,16 +42,16 @@ const MyQuestions = (ii) => {
 
     return (
         <div className="contenedor-2">
-            <b><h2>Mis Preguntas</h2></b>
-        {myQuestions && myQuestions.map((question)=>{
-            return(
-                <QuestionsPrivate key={question.id} question={question} deleteQuestion={sweetAlert}/>
+            <b>
+                <h2>
+                    Mis Preguntas
+                </h2>
+            </b>
+            {myQuestions && myQuestions.map((question) => {
+                return (
+                    <QuestionsPrivate key={question.id} question={question} deleteQuestion={sweetAlert}/>
                 )
-        })}
-        
-        
-        
-        
+            })}
             {error && <h1> Error {error} </h1>}
 
         </div>

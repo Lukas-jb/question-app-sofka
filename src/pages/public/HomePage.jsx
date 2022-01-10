@@ -48,21 +48,21 @@ const HomePage = () => {
 
 
     return (
-        <div className="contenedor-2">
+        <div>
+            <div className="contenedor-2">
+
+                <div>
+                    <h3 className="contenerod-imput">Inicia sesíon para publicar</h3>
+                    <h3>preguntas y respuestas</h3>
+                </div>
+                {usuario ? <PrivateLayout/> : <Login setUsuario={setUsuario}/>}
 
 
-            <div>
-                <h3 className="contenerod-imput">Inicia sesíon para publicar</h3>
-                <h3>preguntas y respuestas</h3>
-            </div>
-
-            {usuario ? <PrivateLayout/> : <Login setUsuario={setUsuario}/>}
-            <div className="espaciado-boton">
+                <div className="espaciado-boton"></div>
                 <button className="btn btn-primary  btn-lg active" role="button" onClick={handler}><img
                     src="/imgGoogle.png" height="30" width="30" style={{marginRight: "10px"}}/> Continuar con google
                 </button>
-            </div>
-
+            </  div>
         </div>
     )
 
