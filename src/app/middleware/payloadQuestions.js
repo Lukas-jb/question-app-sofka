@@ -92,9 +92,11 @@ export const deleteAnswer = (id) => (dispatch) => {
         method: 'DELETE',
         url: `http://localhost:8080/answer/delete/${id}`
     };
-    console.log(id, "id")
+
     axios.request(options).then(function (response) {
+        console.log(id, "antes id")
         dispatch(oneQuestionsDeleteAnswer(id))
+        console.log(id, "despues id")
     }).catch(function (error) {
         dispatch(oneQuestionLoadError(error.message))
     });

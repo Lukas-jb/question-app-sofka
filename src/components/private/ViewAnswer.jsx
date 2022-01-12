@@ -20,7 +20,7 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
                 {console.log(answer.id,"daslkdjñdsfhadshfañldsfldkasfkadhsfhdfhasldfhadshfladsncadskjcnñdslc")}
             </div>
             <div className="eliminar-answer">
-                {state.user.uid === answer.userId ? deleteAnswer && (
+                {deleteAnswer && (
                     <button
                         className="btn btn-danger "
                         id={answer.id}
@@ -28,7 +28,7 @@ const ViewAnswer = ({answer, deleteAnswer}) => {
                     >
                         Eliminar Respuesta
                     </button>
-                ) : null}
+                )}
             </div>
         </div>
 
