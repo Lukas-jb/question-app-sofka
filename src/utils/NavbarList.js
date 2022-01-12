@@ -22,5 +22,9 @@ export const privateNavbar = [
         titulo: 'Mis Preguntas',
         url: '/private/MyQuestions/',
     },
+    {
+        titulo: 'Mis Perfil',
+        url: '/private/Profile/',
+    },
 
 ];

@@ -9,6 +9,7 @@ import OneQuestionPagePublic from './pages/public/OneQuestionPagePublic';
 import QuestionsPagePublic from './pages/public/QuestionsPagePublic';
 import CreateQuestion from './pages/private/CreateQuestion';
 import MyQuestions from './pages/private/MyQuestions';
+import MyProfile from './pages/private/MyProfile';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -30,6 +31,7 @@ function App() {
                         <Route path="Question/:id" element={<OneQuestionPagePrivate/>}/>
                         <Route path="CreateQuestion" element={<CreateQuestion/>}/>
                         <Route path="MyQuestions" element={<MyQuestions/>}/>
+                        <Route path="Profile" element={<MyProfile />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

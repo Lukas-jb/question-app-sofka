@@ -1,14 +1,23 @@
 import React from 'react'
 import {useState} from 'react'
 import {app} from '../../service/firebase';
+import { useDispatch } from "react-redux"
+import { getUserValidation, postUser } from '../../app/middleware/payloadQuestions'
+
+const imagenDePerfil = "https://firebasestorage.googleapis.com/v0/b/quetions-app.appspot.com/o/pngwing.com.png?alt=media&token=ae687cb3-1160-4aa6-909c-a4e320f0a1c6"
 
 export const Login = (props) => {
-
+    const dispatch = useDispatch()
     const [isRegistrando, setIsRegistrando] = useState(false)
 
     const crearUsuario = (correo, contraseña) => {
         app.auth().createUserWithEmailAndPassword(correo, contraseña)
             .then((usuarioFirebase) => {
+                dispatch(postUser(
+                    usuarioFirebase.user.email.split("@")[0],
+                    usuarioFirebase.user.uid,
+                    imagenDePerfil
+                ))
                 console.log("usuario creado", usuarioFirebase)
                 props.setUsuario(usuarioFirebase);
             });

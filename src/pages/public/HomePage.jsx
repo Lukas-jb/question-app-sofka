@@ -6,6 +6,7 @@ import {loginAction, loggedAction} from "../../actions/AuthorActions"
 import {Outlet, useNavigate,} from "react-router-dom";
 import PrivateLayout from "../../layout/PrivateLayout";
 import {Login} from "./Login";
+import { getUserValidation, postUser } from '../../app/middleware/payloadQuestions'
 
 
 const HomePage = () => {
@@ -19,11 +20,7 @@ const HomePage = () => {
     const handler = () => {
         app.auth().signInWithPopup(google)
             .then(user => {
-                dispatch(loginAction(user.user.multiFactor.user.email,
-                    user.user.multiFactor.user.displayName,
-                    user.user.multiFactor.user.uid,
-                    user.user.multiFactor.user.photoURL))
-                navigate("/private/QuestionsPage")
+                dispatch(getUserValidation(user.user.multiFactor.user, navigate))
             })
             .catch()
     }
