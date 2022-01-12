@@ -1,44 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# question-app-sofka
+## Directriz 2 :20PTS
+Opción de menú que permita la actualización de los datos
+personales:
+Directrices:
+1. Como usuario autenticado se debe presentar un opción de
+menú donde me permita redireccionar a una ventana de perfil
+de usuario
+2. Como usuario autenticado se debe permitir visualizar la
+siguiente información personal:
+a. Nombre
+b. Apellido
+c. Correo (el correo lo puede sacar de la sesión de
+firebase)
+3. Dado el caso que no se tenga esta información aparecerá en
+blanco
+4. Se debe guardar los datos de la persona y luego permitir
+actualizarla
 
-## Available Scripts
+## Directriz 3 :15 PTS
+Ventana de confirmación para eliminar la pregunta y opción de eliminar una respuesta por el dueño (con ventana de confirmación) Directrices:
 
-In the project directory, you can run:
+Se debe tener una ventana de confirmación (modal) que me permita confirmar que en realidad quiero eliminar la pregunta, si el usuario confirma se debe eliminar
+Se debe tener una opción (botón) que me permita eliminar una respuesta escrita por el dueño de la respuesta, es decir solo el dueño puede eliminar sus respuestas
+Se debe tener una ventana de confirmación para eliminar la respuesta
 
-### `npm start`
+## Directriz 4: los que considere (Porque está incompleto)
+Búsqueda y filtros de preguntas Directrices:
+Filtra por categoria
+Filtra por tipo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Directriz 6: 5 PTS
+Agregar un Footer Directrices:
+Debe contener una descripción general de lo que hace
+Debe ser visible en toda la página
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Directriz 7: 20 PTS
+Agregar autenticación con usuario y contraseña Directrices:
+Se debe tener un formulario que permite registrarse con usuario y contraseña
+Se debe tener una ventana para hacer login y logout usando usuario y contraseña
 
-### `npm test`
+## Directriz 11: 25 PTS
+Directrices:
+Cuando se cree una respuesta se debe enviar un correo electrónico indicando que existe una respuesta a una pregunta en concreto
+El template del email puede ser cualquiera
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Directriz 12: 10 PTS
+Tener el campo de respuesta y de pregunta enriquecido Directrices:
+Cambiar los textareas a un componente enriquecido
+Poder guardar HTML
+Poder mostrar formato de código
 
-### `npm run build`
+## Directriz 13: 5 PTS
+Agregar un icono/logo a la aplicación Directrices:
+Seleccionar un icono/logo y ponerlo siempre visible
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# TOTAL PUNTOS 
+100
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## https://preguntas-respuestas-sofka.firebaseapp.com
+## https://floating-ravine-09712.herokuapp.com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
